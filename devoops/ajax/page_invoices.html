@@ -1,0 +1,392 @@
+<script type="text/javascript">
+function  cscs(){ 
+
+	try{
+    	LoadDataTablesScripts(function(){	
+	         LoadSelect2Script($('select').select2()); 
+        });
+		}
+		catch(err)
+		{
+			
+		}
+}
+function fff()
+{
+cscs();
+checkes();
+}
+function  checkes(){
+ var quan=document.getElementById('as');
+ if(quan.checked==true){
+	for(var i=1;i<7;i++){
+	 var a=document.getElementById('as'+i);
+	 a.checked=true;
+	 }
+ }else{
+	 	for(var i=1;i<7;i++){
+	 var a=document.getElementById('as'+i);
+	 a.checked=false;
+	 }
+ }
+}
+</script>
+<div class="row"style="margin-top:20px;" >
+	<div class="col-xs-12">
+		<div class="box"style=" margin-left:10px;margin-right:10px; width:auto;">	
+		<div class="box-header">
+				<div class="box-name" id="xxx">
+					<span style="font-size:20px; margin-left:20px; color:#5781A2; font-weight:200px;">赔案详细信息</span>
+				</div>		
+			</div>
+			<div class="box-content">
+				<div class="col-xs-6"style="width:320px; margin-left:15px; float:left; ">
+				
+					<address>	
+					<h3 class="invoice-header">主被保险人姓名：朱晓燕</h3>
+					<br>主被保险人证件号码：31010519680827124x<br>
+					主被保险人性别：女
+					<p>主被保险人出生日期：1968/08/27</p>
+					</address>
+					<br><b>保单号：000030000000002</b><br>
+					<strong>保单名称：锦江在职-有医保-梯次免赔-750</strong><br>
+						分单号：012017300006030135000001<br>
+						投保险种：世纪安心团体医疗保险<br>
+						保单日期：2017/01/01 ~ 2017/12/13<br>
+					<p class="txt-danger">主连关系: Child</p></div>
+				
+				
+				<div class="col-xs-6 text-right" style="width:300px;float:right; margin-right:10px;">
+					
+					<address>
+					<h3 class="invoice-header">被保险人姓名：薛佳悦</h3><br>
+						被保险人证件号码<strong>：</strong>31010519680887469x<br>
+						<abbr >出生日期：2005/11/03</abbr><br>
+						被保险人性别：女<br>
+					</address>
+					<address>
+						<strong>医保标记：是</strong><br>
+						<br>
+						<strong>医保城市:上海</strong>
+					</address>
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-xs-12">
+					<br/>
+			
+				</div>
+				</div>
+			</div>
+	
+		
+		  <div class="main_main2">
+	       <div class="main_main_top">
+		     <div class="main_main_top_left">受益人信息</div>
+		    </div>
+		   <form>
+		       <ul class="form_main">
+			      <li><span>受益人姓名</span><input type="text"disabled="disabled"style="margin-left:80px; " name="pc" value="乔云 C" /></li>
+				  <li><span>受益人证件号码</span><input type="text"disabled="disabled" style="margin-left:60px; " name="aj"value="340122197412028127" /></li>
+				  <li><span>开户行</span><input type="text"disabled="disabled" style="margin-left:80px; "name="cx"value="中国工商银行昆明市小坝分理处" /></li>
+			   </ul>
+			   <ul class="form_main">
+			      <li><span>账户名</span><input type="text" id="names"style="margin-left:110px; "  disabled="disabled"  name="pc" value="乔云" /></li>
+				  <li><span>账号</span><input type="text" style="margin-left:130px; "disabled="disabled "name="zj"value="6212262502016214986" /></li>
+				  <li><span>开户省</span><input type="text" style="margin-left:80px; "disabled="disabled" name="sj" value="云南" /></li>
+			   </ul>
+			   	<ul class="form_main">
+			      <li><span>开户市</span><input type="text" style="margin-left:110px; "disabled="disabled"name="yy" value="昆明"/></li>
+				  <li><span>支付方式</span><input type="text" style="margin-left:100px; "disabled="disabled"name="zs" value="CHEQUE"/></li>  
+			   </ul>
+	        <ul class="form_butten">	  
+			      <li><input type="button" value="返回"style="background:#6293BA;font-size:13px; color:#fff; border:none" onclick="returns()" /></li>
+			
+			   </ul>
+		   </form>
+	  </div>
+	    	  <div class="main_main3">
+	     <div class="main_main_top">
+		   <div class="main_main_top_left">发票信息</div>
+		  </div>
+		<div class="box-content1 no-padding" id="downs"  >
+				<table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-1">
+					<thead>
+						<tr>
+						     <th style="width:20px;">       
+							 <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as" onclick="checkes()"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+							   </th>
+							<th style="width:65px;">就诊类型</th>
+							<th style="width:50px;">发票号</th>
+							<th style="width:65px;">就诊日期</th>
+							<th style="width:60px;">就诊医院</th>
+							<th style="width:60px;">疾病名称</th>
+							<th style="width:80px;">发票总金额</th>
+							<th style="width:110px;">自费项扣减金额</th>
+							<th style="width:80px;">第三方给付</th>
+							<th style="width:60px;">核准金额</th>
+							<th style="width:60px; text-align:center;">拒付代码</th>
+							<th style="width:60px;">拒付原因</th>
+							<th style="width:20px;">备注</th>
+							<th style="width:80px;">质检结论</th>
+							<th style="width:80px;">不通过原因</th>
+							<th style="width:80px;">不通过描述</th>
+						</tr>
+					</thead>
+					<!--<div  class="main-menu"
+				<a class="ajax-link" href="#"  onclick="" target=_self>sssssssssssssssssssss</a>
+					</div>
+					-->
+					<tbody >
+			
+					<!-- Start: list_row -->  
+			        	<tr >
+						     <td >
+						       <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as1"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+						    </td>
+	                        <td style="width:60px;">门诊</td>
+	                       <td style="width:60px;">1715336737</td>
+	                       <td style="width:60px;">2017-9-12</td>
+	                       <td style="width:60px;">上海交通大学医学院附属瑞金医院</td>
+	                       <td style="width:60px;">高血压</td>
+	                      <td style="width:60px;">16</td>
+	                      <td style="width:60px;">6</td>
+	                       <td style="width:60px;">0</td>
+	                       <td style="width:60px;">7.2</td>
+	   	                   <td style="width:60px;">R530</td>
+	                       <td style="width:60px;">自付比例已从总赔付金额中扣除</td>
+		                  <td style="width:60px;">无</td>
+	                      <td style="width:80px;"><select id="a1" style="width:80px; text-align:center;"><option id="sele1" style="text-align:center;">通过</option><option id="sele2" >不通过</option></select></td>
+						 <td style="width:60px;"><input type="text"   id="tss2" style="width:60px;"value="无"/></td>
+						 	 <td style="width:60px;"><input type="text" id="tss3"style="width:60px;" value="无"/></td>
+						</tr>
+						  	<tr >
+							     <td >
+						       <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as2"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+						    </td>
+	                        <td style="width:60px;">门诊</td>
+	                       <td style="width:60px;">1715336737</td>
+	                       <td style="width:60px;">2017-9-2</td>
+	                       <td style="width:60px;">上海交通大学医学院附属瑞金医院</td>
+	                       <td style="width:60px;">高血压</td>
+	                      <td style="width:60px;">16</td>
+	                      <td style="width:60px;">6</td>
+	                       <td style="width:60px;">0</td>
+	                       <td style="width:60px;">7.2</td>
+	   	                   <td style="width:60px;">W080</td>
+	                       <td style="width:60px;">当前的医疗计划不止一种</td>
+		                  <td style="width:60px;">无</td>
+	                      <td style="width:80px;"><select id="a2" style="width:80px; text-align:center;"><option id="sele1" style="text-align:center;">通过</option><option id="sele2" >不通过</option></select></td>
+						 <td style="width:60px;"><input type="text"   id="tss5" style="width:60px;"value="无"/></td>
+						 	 <td style="width:60px;"><input type="text" id="tss6"style="width:60px;" value="无"/></td>
+						</tr>
+						  
+						  	<tr >
+							     <td >
+						       <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as3"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+						    </td>
+	                        <td style="width:60px;">门诊</td>
+	                       <td style="width:60px;">1715336737</td>
+	                       <td style="width:60px;">2017-8-12</td>
+	                       <td style="width:60px;">上海市同仁医院</td>
+	                       <td style="width:60px;">扁桃体周围蜂窝组织炎</td>
+	                      <td style="width:60px;">13</td>
+	                      <td style="width:60px;">16</td>
+	                       <td style="width:60px;">0</td>
+	                       <td style="width:60px;">5.85</td>
+	   	                   <td style="width:60px;">W270</td>
+	                       <td style="width:60px;">当前的医疗计划不止一种</td>
+		                  <td style="width:60px;">无</td>
+	                      <td style="width:80px;"><select id="a3" style="width:80px; text-align:center;"><option id="sele1" style="text-align:center;">通过</option><option id="sele2" >不通过</option></select></td>
+						 <td style="width:60px;"><input type="text"   id="tss5" style="width:60px;"value="无"/></td>
+						 	 <td style="width:60px;"><input type="text" id="tss6"style="width:60px;" value="无"/></td>
+						</tr>
+						  	<tr >
+							     <td >
+						       <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as4"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+						    </td>
+	                        <td style="width:60px;">门诊</td>
+	                       <td style="width:60px;">1715336737</td>
+	                       <td style="width:60px;">2017-10-12</td>
+	                       <td style="width:60px;">上海市同仁医院</td>
+	                       <td style="width:60px;">扁桃体周围蜂窝组织炎</td>
+	                      <td style="width:60px;">16</td>
+	                      <td style="width:60px;">6</td>
+	                       <td style="width:60px;">0</td>
+	                       <td style="width:60px;">7.2</td>
+	   	                   <td style="width:60px;">R530</td>
+	                       <td style="width:60px;">当前的医疗计划不止一种</td>
+		                  <td style="width:60px;">无</td>
+	                      <td style="width:80px;">
+						  
+		                   <select id="a4" style="width: 80px; text-align: center;"><option id="sele1" style="text-align: center;">通过</option><option id="sele2">不通过</option></select>
+
+						 
+						  </td>
+						 <td style="width:60px;"><input type="text"   id="tss5" style="width:60px;"value="无"/></td>
+						 	 <td style="width:60px;"><input type="text" id="tss6"style="width:60px;" value="无"/></td>
+						</tr>
+						<tr>
+						   <td >
+						       <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as5"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+						    </td>
+	                        <td style="width:60px;">门诊</td>
+	                       <td style="width:60px;">1715336737</td>
+	                       <td style="width:60px;">2017-10-15</td>
+	                       <td style="width:60px;">上海交通大学医学院附属瑞金医院</td>
+	                       <td style="width:60px;">高血压</td>
+	                      <td style="width:60px;">16</td>
+	                      <td style="width:60px;">6</td>
+	                       <td style="width:60px;">0</td>
+	                       <td style="width:60px;">7.2</td>
+	   	                   <td style="width:60px;">W080</td>
+	                       <td style="width:60px;">当前的医疗计划不止一种</td>
+		                  <td style="width:60px;">无</td>
+	                      <td style="width:80px;">
+						  
+						  	  
+					   
+		                   <select  id="a5" style="width: 80px; text-align: center;"><option id="sele1" style="text-align: center;">通过</option><option id="sele2">不通过</option></select>
+						  
+						  
+						  </td>
+						 <td style="width:60px;"><input type="text"   id="tss5" style="width:60px;"value="无"/></td>
+						 	 <td style="width:60px;"><input type="text" id="tss6"style="width:60px;" value="无"/></td>
+						</tr>
+					       <tr >
+							  <td >
+						       <div class="checkbox" style="margin-right:12px;">
+							     <label>
+								  <input type="checkbox" id="as6"> 
+								  <i class="fa fa-square-o"></i>
+								 </label>
+					           </div>
+						    </td>
+	                        <td style="width:60px;">门诊</td>
+	                       <td style="width:60px;">1715336737</td>
+	                       <td style="width:60px;">2017-9-12</td>
+	                       <td style="width:60px;">上海交通大学医学院附属瑞金医院</td>
+	                       <td style="width:60px;">高血压</td>
+	                      <td style="width:60px;">16</td>
+	                      <td style="width:60px;">6</td>
+	                       <td style="width:60px;">0</td>
+	                       <td style="width:60px;">7.2</td>
+	   	                   <td style="width:60px;">W270</td>
+	                       <td style="width:60px;">当前的医疗计划不止一种</td>
+		                  <td style="width:60px;">无</td>
+	                      <td style="width:80px;">
+						  
+	
+		                   <select id="a6" style="width: 80px; text-align: center;"><option id="sele1" style="text-align: center;">通过</option><option id="sele2">不通过</option></select>
+             
+						  </td>
+						 <td style="width:60px;"><input type="text"   id="tss5" style="width:60px;"value="无"/></td>
+						 	 <td style="width:60px;"><input type="text" id="tss6"style="width:60px;" value="无"/></td>
+						</tr>
+					</tbody>		
+				</table>			
+		
+			
+         </div> 	 			
+				 
+		   </form>
+		   <div >
+				<ul class="form_butten1" style="margin-top:50px;">	
+			      <li><input type="button"style="background:#6293BA;font-size:13px; width:100px; color:#fff; border:none" value="质检通过" onclick="tong()" /></li>
+			      <li><input type="button"style="background:#6293BA;font-size:13px;width:100px; color:#fff; border:none" value="质检不通过" onclick="butong()" /></li>		
+				  </ul>
+                  <ul class="form_butten"style="margin-top:50px;">	
+			      <li><input type="button"style="background:#6293BA;font-size:13px; color:#fff; border:none" value="返回" onclick="returns()" /></li>
+			      <li><input type="button"style="background:#6293BA;font-size:13px; color:#fff; border:none" value="保存" /></li>		
+				  </ul>	
+			</div> 	
+          
+	  </div>	
+	
+          <div style="clear:both;"> </div> 
+	    	  <div class="main_main5">
+	  
+	     <div class="main_main_top">
+		   <div class="main_main_top_left">投保计划及保额信息</div>
+		  </div>
+		   <form>
+		       <ul class="form_main">
+			      <li><span>险种名称</span><input style="margin-left:110px; " type="text"disabled="disabled"  name="pc" value="测试险种" /></li>
+				  <li><span>责任编码</span><input style="margin-left:110px; "type="text"disabled="disabled" name="aj"value="201701514569110001" /></li>
+				  <li><span>责任名称</span><input style="margin-left:110px; "type="text"disabled="disabled" id="namess" name="cx"value="张三" /></li>
+			   </ul>
+			   <ul class="form_main">
+			      <li><span>计划编码</span><input style="margin-left:110px; "type="text"disabled="disabled "name="zj"value="412726565656566565" /></li>
+				  <li><span>计划名称</span><input style="margin-left:110px; "type="text"disabled="disabled "name="zj"value="无" /></li>
+				  <li><span>责任描述</span><input style="margin-left:110px; "type="text"disabled="disabled name="sj"value="无" /></li>
+			   </ul>
+			   	<ul class="form_main">
+			      <li><span>保额描述</span><input style="margin-left:110px; "type="text" disabled="disabled"name="yy" value="无"/></li>
+				  <li><span>总保额</span><input style="margin-left:120px; "type="text" disabled="disabled"name="zs" value="1000"/></li>  
+				   <li><span>剩余可用保额</span><input style="margin-left:80px; "type="text" disabled="disabled"name="zs" value="1000"/></li>  
+			   </ul>
+			    	<ul class="form_main">
+			      <li><span>免赔额描述</span><input type="text" style="margin-left:95px; " disabled="disabled"name="yy" value="实打实"/></li>
+				  <li><span>总免赔额</span><input type="text" style="margin-left:110px; " disabled="disabled"name="zs" value="1003"/></li>  
+				   <li><span>累计已扣免赔额</span><input  style="margin-left:65px; "style="width:90px;" type="text" disabled="disabled"name="zs" value="1003"/></li>  
+			   </ul>
+			    	<ul class="form_main">
+			      <li><span>赔付比例</span><input  style="width:150px;margin-left:110px; "type="text" disabled="disabled"name="yy" value="10%"/></li>
+				  <li><span>备注</span><input style="width:150px;margin-left:140px; "type="text"disabled="disabled"name="zs" value="无"/></li>   
+			   </ul>
+               <ul class="form_butten">	  
+			      <li><input type="button" style="background:#6293BA;font-size:13px; color:#fff; border:none" value="返回" onclick="returns()" /></li>
+			   </ul>
+		   </form>
+	  </div> 
+
+				</div>
+				
+			</div>  <script type="text/javascript">
+function AllTables(){
+    	TestTable1();
+	LoadSelect2Script(MakeSelect2);
+}
+function MakeSelect2(){
+	$('select').select2();
+}
+$(document).ready(function() {
+	// Load Datatables and run plugin on tables 
+	LoadDataTablesScripts(AllTables);
+	// Add Drag-n-Drop feature
+	WinMove();
+});
+</script>
+
+		
+	</div>
+</div>
