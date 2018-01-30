@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore> 
+  <book id="sdsds"> 
+    <name isSelf="n">王二麻子</name>  
+    <author>乔治马丁</author>  
+    <year>2014</year>  
+    <price AAAAAAA="价钱好说">89</price>  
+    <name>9</name> 
+  </book>  
+  <book id="sdsds"> 
+    <name isSelf="n">安徒生童话</name>  
+    <year>2004</year>  
+    <price AAAAAAA="价钱好说">77</price>  
+    <language>English</language> 
+  </book> 
+</bookstore>
